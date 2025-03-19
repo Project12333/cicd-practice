@@ -4,7 +4,7 @@
 
 	<groupId>com.mycompany</groupId>
 	<artifactId>cicd_practice_project</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>mule-application</packaging>
 
 	<name>cicd_practice_project</name>
@@ -27,7 +27,7 @@
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
+				<version>3.0</version>
 				<extensions>true</extensions>
 				<configuration>
 <cloudHubDeployment>
@@ -74,6 +74,25 @@
 			<url>https://repository.mulesoft.org/releases/</url>
 			<layout>default</layout>
 		</repository>
+		<repository>
+            <id>mulesoft-snapshots</id>
+            <name>MuleSoft Snapshots Repository</name>
+            <url>https://repository.mulesoft.org/snapshots/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>releases-ee</id>
+            <name>Mule EE Repository</name>
+            <url>https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <!-- It is necessary to have defined the Exchange repository to publish the asset -->
+            <id>anypoint-exchange</id>
+            <name>Anypoint Exchange</name>
+            <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/YOUR_GROUP_ID/maven/</url>
+            <layout>default</layout>
+        </repository>
 	</repositories>
 
 	<pluginRepositories>
@@ -86,6 +105,24 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</pluginRepository>
+		 <pluginRepository>
+            <id>mulesoft-snapshots</id>
+            <name>mulesoft snapshots repository</name>
+            <layout>default</layout>
+            <url>http://repository.mulesoft.org/snapshots/</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>mule-plugin</id>
+            <name>Mule Repository</name>
+            <url>https://repository.mulesoft.org/nexus/content/repositories/public/</url>
+        </pluginRepository>
 	</pluginRepositories>
-
+	 <distributionManagement>
+        <repository>
+            <id>anypoint-exchange</id>
+            <name>Anypoint Exchange</name>
+            <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/YOUR_GROUP_ID/maven/</url>
+            <layout>default</layout>
+        </repository>
+    </distributionManagement>
 </project>
