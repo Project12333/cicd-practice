@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>d428aa72-9f35-41e6-8f76-307ce76c34b7</groupId>
-	<artifactId>cicd_practice_project</artifactId>
+	<artifactId>cicd-practice-project</artifactId>
 	<version>1.0.2-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
