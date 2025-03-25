@@ -29,6 +29,7 @@
    				 <extensions>true</extensions>
    				 <configuration>
         			<classifier>mule-application</classifier>
+				<runtimeVersion>4.9.0</runtimeVersion>
         			<cloudhub2Deployment>
 			            <uri>https://anypoint.mulesoft.com</uri>
 			            <provider>MC</provider>
