@@ -4,7 +4,7 @@
 
 	<groupId>d428aa72-9f35-41e6-8f76-307ce76c34b7</groupId>
 	<artifactId>cicd-practice-project</artifactId>
-	<version>1.0.4</version>
+	<version>1.0.5</version>
 	<packaging>mule-application</packaging>
 
 	<name>cicd_practice_project</name>
@@ -39,6 +39,7 @@
 			            <applicationName>${project.artifactId}</applicationName>
 			            <releaseChannel>EDGE</releaseChannel>
 			            <replicas>1</replicas>
+				    <javaVersion>17</javaVersion>
 			            <vCores>0.1</vCores>
            			    <deploymentSettings>
                				 <generateDefaultPublicUrl>true</generateDefaultPublicUrl>
